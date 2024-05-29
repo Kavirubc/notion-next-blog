@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ExtendedRecordMap } from "notion-types";
 import { NotionPage } from "@/components/NotionPage";
 import { rootNotionPageId } from "@/lib/config";
+import Loader from "@/components/loading";
 
 const Page = () => {
   const [recordMap, setRecordMap] = useState<ExtendedRecordMap | null>(null);
@@ -18,7 +19,15 @@ const Page = () => {
     fetchRecordMap();
   }, []);
 
-  if (!recordMap) return <div>Loading...</div>;
+  if (!recordMap) return 
+  
+  <div>
+    <Loader
+      type="spin"
+      color="#000"
+    />
+    
+    </div>;
 
   return <NotionPage recordMap={recordMap} rootPageId={rootNotionPageId} />;
 };

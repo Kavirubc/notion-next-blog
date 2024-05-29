@@ -23,6 +23,9 @@ dependencies:
   react-dom:
     specifier: ^18
     version: 18.3.1(react@18.3.1)
+  react-loading:
+    specifier: ^2.0.3
+    version: 2.0.3(prop-types@15.8.1)(react@18.3.1)
   react-notion-x:
     specifier: ^6.16.0
     version: 6.16.0(@babel/runtime@7.24.6)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)(webpack@5.91.0)
@@ -3012,6 +3015,16 @@ packages:
 
   /react-lifecycles-compat@3.0.4:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
+    dev: false
+
+  /react-loading@2.0.3(prop-types@15.8.1)(react@18.3.1):
+    resolution: {integrity: sha512-Vdqy79zq+bpeWJqC+xjltUjuGApyoItPgL0vgVfcJHhqwU7bAMKzysfGW/ADu6i0z0JiOCRJjo+IkFNkRNbA3A==}
+    peerDependencies:
+      prop-types: ^15.6.0
+      react: '>=0.14.0'
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.3.1
     dev: false
 
   /react-modal@3.16.1(react-dom@18.3.1)(react@18.3.1):

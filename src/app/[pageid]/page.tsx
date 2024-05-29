@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { ExtendedRecordMap } from "notion-types";
 import { NotionPage } from "@/components/NotionPage";
 import { rootNotionPageId } from "@/lib/config";
+import Loader from "@/components/loading";
 
 const Page = () => {
     const { pageid } = useParams();
@@ -22,7 +23,18 @@ const Page = () => {
         }
     }, [pageid]);
 
-    if (!recordMap) return <div>Loading...</div>;
+    if (!recordMap) return 
+    <div>
+        
+        <Loader
+        
+        type="spin"
+        color="#000"
+        
+
+        />
+    
+    </div>;
 
     return <NotionPage recordMap={recordMap} rootPageId={rootNotionPageId} />;
 };
